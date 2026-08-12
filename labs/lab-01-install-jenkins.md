@@ -155,21 +155,21 @@ You should now see the Jenkins Dashboard.
 ## Part 9 — Create Your First Jenkins Job
 
 From the Jenkins Dashboard:
-
+```bash
 New Item
-
+```
 Enter:
-
+```bash
 hello-jenkins
-
+```
 Select:
-
+```bash
 Freestyle project
-
+```
 Click:
-
+```bash
 OK
-
+```
 ## Part 10 — Add a Build Step
 
 Find:
