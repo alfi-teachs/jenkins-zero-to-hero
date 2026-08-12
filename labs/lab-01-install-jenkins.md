@@ -81,33 +81,23 @@ Check the Jenkins logs:
 ```bash
 docker logs jenkins
 ```
-You can also follow the logs:
-```bash
-docker logs -f jenkins
-```
-Press:
-```bash
-Ctrl + C
-```
-to stop following the logs.
-
-The container itself will continue running.
+.
 
 ## Part 4 — Get the Jenkins Initial Password
-
-Run:
-```bash
-docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-```
-Copy the password.
-
-You will use it to unlock Jenkins.
-
-## Part 5 — Open Jenkins
-
 Open your browser:
 ```bash
 http://localhost:8081
+```
+Run:
+```bash
+docker exec -it jenkins bash
+```
+
+## Part 5 — Get the initial Jenkins password
+
+Open your browser:
+```bash
+cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 You should see:
 
