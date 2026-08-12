@@ -1,4 +1,4 @@
-Part 1— Create Jenkins Network
+## Part 1— Create Jenkins Network
 
 Go back to the repository root if necessary:
 
@@ -18,7 +18,7 @@ jenkins
 
 If Docker says the network already exists, that is okay.
 
-Part 2 — Create Jenkins Volume
+## Part 2 — Create Jenkins Volume
 
 Create persistent storage for Jenkins:
 ```bash
@@ -49,12 +49,12 @@ Build history
 User information
 
 inside:
-
+```bash
 /var/jenkins_home
-
+```
 The Docker volume keeps this data outside the container lifecycle.
 
-Part 3 — Start Jenkins
+## Part 3 — Start Jenkins
 
 Run Jenkins:
 ```bash
@@ -93,7 +93,7 @@ to stop following the logs.
 
 The container itself will continue running.
 
-Part 4 — Get the Jenkins Initial Password
+## Part 4 — Get the Jenkins Initial Password
 
 Run:
 ```bash
@@ -103,7 +103,7 @@ Copy the password.
 
 You will use it to unlock Jenkins.
 
-Part 5 — Open Jenkins
+## Part 5 — Open Jenkins
 
 Open your browser:
 ```bash
@@ -115,7 +115,7 @@ Unlock Jenkins
 
 Paste the initial administrator password.
 
-Part 6 — Install Jenkins Plugins
+## Part 6 — Install Jenkins Plugins
 
 Select:
 
@@ -123,7 +123,7 @@ Install suggested plugins
 
 Wait for the installation to complete.
 
-Part 7 — Create Jenkins Administrator
+## Part 7 — Create Jenkins Administrator
 
 Create your Jenkins administrator.
 
@@ -145,7 +145,7 @@ Use your own password and email.
 
 Do not commit passwords or secrets to GitHub.
 
-Part 8 — Jenkins URL
+## Part 8 — Jenkins URL
 
 Keep the Jenkins URL as:
 ```bash
@@ -161,7 +161,7 @@ Start using Jenkins
 
 You should now see the Jenkins Dashboard.
 
-Part 9 — Create Your First Jenkins Job
+## Part 9 — Create Your First Jenkins Job
 
 From the Jenkins Dashboard:
 
@@ -179,7 +179,7 @@ Click:
 
 OK
 
-Part 10 — Add a Build Step
+## Part 10 — Add a Build Step
 
 Find:
 
@@ -213,7 +213,7 @@ Click:
 
 Save
 
-Part 11 — Run the Jenkins Job
+## Part 11 — Run the Jenkins Job
 
 Click:
 ```bash
@@ -246,7 +246,7 @@ Build number:
 
 The exact output can vary.
 
-Part 12 — Understand What Happened
+## Part 12 — Understand What Happened
 
 The basic Jenkins flow was:
 
@@ -269,7 +269,7 @@ Jenkins Dashboard
 
 Jenkins created a workspace for the job and executed the shell commands.
 
-Part 13 — Check Jenkins Container
+## Part 13 — Check Jenkins Container
 
 From Git Bash:
 ```bash
@@ -287,7 +287,7 @@ Check Jenkins logs:
 ```bash
 docker logs jenkins
 ```
-Part 14 — Verify Jenkins Volume
+## Part 14 — Verify Jenkins Volume
 
 Run:
 ```bash
@@ -295,7 +295,7 @@ docker volume inspect jenkins_home
 ```
 This confirms that Jenkins data is stored in the Docker volume.
 
-Part 15 — Git Commit the Lab
+## Part 15 — Git Commit the Lab
 
 Go to your repository root:
 ```bash
@@ -325,7 +325,7 @@ jenkins-zero-to-hero/
 └── lab-01-jenkins-from-scratch/
     └── README.md
 
-Part 16 — Lab 1 Cleanup
+## Part 16 — Lab 1 Cleanup
 
 If you want to keep Jenkins for the next lab, do not run the cleanup commands.
 
