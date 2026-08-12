@@ -71,6 +71,9 @@ Check the container:
 ```bash
 docker ps
 ```
+```bash
+docker start jenkins
+```
 You should see a Jenkins container.
 
 Example:
@@ -81,8 +84,6 @@ Check the Jenkins logs:
 ```bash
 docker logs jenkins
 ```
-.
-
 ## Part 4 — Get the Jenkins Initial Password
 Open your browser:
 ```bash
