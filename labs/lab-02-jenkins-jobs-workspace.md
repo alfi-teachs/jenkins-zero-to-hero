@@ -1157,21 +1157,27 @@ exit
 Run:
 
 ```bash
-docker exec jenkins sh -c "ls -la /var/jenkins_home/workspace/lab-02-job"
+docker exec jenkins bash
 ```
-
+```bash
+ls -la /var/jenkins_home/workspace/lab-02-job
+```
 Check:
 
 ```bash
-docker exec jenkins sh -c "ls -la /var/jenkins_home/workspace/lab-02-job/output"
+docker exec jenkins bash 
 ```
-
+```bash
+ls -la /var/jenkins_home/workspace/lab-02-job/output
+```
 Read:
 
 ```bash
-docker exec jenkins sh -c "cat /var/jenkins_home/workspace/lab-02-job/output/build-info.txt"
+docker exec jenkins bash
 ```
-
+```bash
+cat /var/jenkins_home/workspace/lab-02-job/output/build-info.txt
+```
 ---
 
 # Part 28 — Understand Job vs Build
@@ -1194,9 +1200,7 @@ lab-02-job
     ├── Build #4
     └── Build #5
 ```
-
 ---
-
 # Part 29 — Complete Lab 2 Flow
 
 ```text
@@ -1324,7 +1328,6 @@ git commit -m "Add Jenkins Lab 2 jobs workspace and build parameters"
 ```
 
 ---
-
 # Part 34 — Push to GitHub
 
 ```bash
@@ -1342,7 +1345,6 @@ Expected:
 ```text
 nothing to commit, working tree clean
 ```
-
 ---
 
 # Part 35 — Verify GitHub
