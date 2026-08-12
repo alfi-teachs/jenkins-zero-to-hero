@@ -451,9 +451,12 @@ result.txt
 Open Git Bash.
 
 Run:
+```bash
+ docker exec -it jenkins bash
+```
 
 ```bash
-docker exec jenkins sh -c "ls -la /var/jenkins_home/workspace/lab-02-job"
+ls -la /var/jenkins_home/workspace/lab-02-job
 ```
 
 Expected output will contain:
@@ -465,9 +468,11 @@ output
 ```
 
 Check the output directory:
-
 ```bash
-docker exec jenkins sh -c "ls -la /var/jenkins_home/workspace/lab-02-job/output"
+ docker exec -it jenkins bash
+```
+```bash
+ls -la /var/jenkins_home/workspace/lab-02-job/output
 ```
 
 Expected:
