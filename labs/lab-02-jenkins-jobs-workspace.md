@@ -482,9 +482,12 @@ result.txt
 ```
 
 Read the file:
+```bash
+ docker exec -it jenkins bash
+```
 
 ```bash
-docker exec jenkins sh -c "cat /var/jenkins_home/workspace/lab-02-job/output/result.txt"
+cat /var/jenkins_home/workspace/lab-02-job/output/result.txt
 ```
 
 Expected:
