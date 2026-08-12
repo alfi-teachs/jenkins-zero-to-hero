@@ -1360,34 +1360,6 @@ jenkins-zero-to-hero/
     │
     └── lab-02-jenkins-jobs-workspace.md
 ```
-
----
-
-# Lab 2 Completion Checklist
-
-```text
-[ ] Jenkins is running
-[ ] lab-02-job created
-[ ] First build completed
-[ ] Build history checked
-[ ] Build numbers understood
-[ ] Jenkins workspace inspected
-[ ] Workspace files created
-[ ] Jenkins environment variables checked
-[ ] Custom variables tested
-[ ] Parameterized build enabled
-[ ] APP_NAME parameter created
-[ ] ENVIRONMENT parameter created
-[ ] APP_VERSION parameter created
-[ ] Multiple parameterized builds completed
-[ ] Build artifact created
-[ ] Artifact archived
-[ ] Jenkins workspace inspected using Docker
-[ ] Lab 2 Markdown saved
-[ ] Lab committed to Git
-[ ] Lab pushed to GitHub
-```
-
 ---
 
 # Lab 2 Cleanup
