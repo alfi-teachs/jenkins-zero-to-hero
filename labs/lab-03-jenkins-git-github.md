@@ -778,7 +778,7 @@ Open Git Bash.
 Run:
 
 ```bash
-docker exec jenkins sh 
+docker exec -it jenkins sh 
 ```
 ```bash
 ls -la 
