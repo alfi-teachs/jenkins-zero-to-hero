@@ -1,21 +1,4 @@
 # Jenkins Zero to Hero — Lab 4
-
-## Jenkins + GitHub Webhook
-
-This lab builds on:
-
-```text
-Lab 1 → Jenkins Installation
-Lab 2 → Jenkins Jobs and Workspace
-Lab 3 → Jenkins + Git + GitHub
-```
-
-In Lab 3, we manually started the Jenkins build using:
-
-```text
-Build Now
-```
-
 In Lab 4, GitHub will automatically notify Jenkins when code is pushed.
 
 The workflow becomes:
@@ -40,13 +23,10 @@ Git Checkout
     v
 Build
 ```
-
 ---
-
 # Lab Objective
 
 By the end of this lab, you will understand:
-
 ```text
 GitHub Webhooks
 Jenkins GitHub Plugin
@@ -57,75 +37,52 @@ Git Push → Jenkins Build
 Webhook Testing
 Webhook Troubleshooting
 ```
-
 ---
-
 # Important
-
 GitHub cannot send a webhook directly to:
-
 ```text
 http://localhost:8081
 ```
-
 GitHub requires a reachable webhook URL.
 
 For this local lab, we will use a Cloudflare Quick Tunnel.
 
 The tunnel will create a temporary public URL such as:
-
 ```text
 https://something-random.trycloudflare.com
 ```
-
 We will use:
-
 ```text
 https://something-random.trycloudflare.com/github-webhook/
 ```
-
 as the GitHub webhook URL.
 
 The Quick Tunnel is for learning and testing only. The URL is temporary and can change when the tunnel is restarted.
-
 ---
-
 # Prerequisites
 
 Jenkins must already be running from the previous labs.
-
 Check:
-
 ```bash
 docker ps
 ```
-
 Expected:
-
 ```text
 jenkins
 ```
-
 If Jenkins is stopped:
-
 ```bash
 docker start jenkins
 ```
-
 Check:
-
 ```bash
 docker ps
 ```
-
 Open Jenkins:
-
 ```text
 http://localhost:8081
 ```
-
 ---
-
 # Part 1 — Verify the Jenkins GitHub Plugin
 
 Open:
