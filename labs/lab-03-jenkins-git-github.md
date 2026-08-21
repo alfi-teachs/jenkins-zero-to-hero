@@ -778,9 +778,14 @@ Open Git Bash.
 Run:
 
 ```bash
-docker exec jenkins sh -c "ls -la /var/jenkins_home/workspace/lab-03-git-checkout"
+docker exec jenkins sh 
 ```
-
+```bash
+ls -la 
+```
+```bash
+cd /var/jenkins_home/workspace/lab-03-git-checkout
+```
 You should see:
 
 ```text
