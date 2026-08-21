@@ -789,10 +789,10 @@ cd /var/jenkins_home/workspace/lab-03-git-checkout
 You should see:
 
 ```text
+Jenkinsfile
 README.md
 app.sh
 version.txt
-.git
 ```
 
 ---
