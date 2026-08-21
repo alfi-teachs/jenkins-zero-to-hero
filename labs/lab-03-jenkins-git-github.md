@@ -284,13 +284,11 @@ Create the version file:
 ```bash
 touch version.txt
 ```
-
 Check:
 
 ```bash
 ls
 ```
-
 Expected:
 
 ```text
@@ -694,23 +692,16 @@ Put files in workspace
       v
 Run shell commands
 ```
-
 ---
-
 # Part 19 — Check Console Output
-
 Click:
-
 ```text
 #1
 ```
-
 Then:
-
 ```text
 Console Output
 ```
-
 You should see Git checkout activity similar to:
 
 ```text
@@ -720,9 +711,7 @@ Cloning the remote Git repository
 Fetching upstream changes
 Checking out Revision
 ```
-
 Then your script output:
-
 ```text
 ======================================
 JENKINS GIT CHECKOUT LAB
@@ -751,9 +740,7 @@ README.md
 app.sh
 version.txt
 ```
-
 ---
-
 # Part 20 — Verify the Git Checkout
 
 The important part is that Jenkins now has the GitHub files in its workspace.
@@ -768,9 +755,7 @@ version.txt
 ```
 
 Jenkins checked these files out automatically from GitHub.
-
 ---
-
 # Part 21 — Check the Jenkins Workspace from Docker
 
 Open Git Bash.
@@ -794,7 +779,6 @@ README.md
 app.sh
 version.txt
 ```
-
 ---
 
 # Part 22 — Read the Checked-Out File from Docker
@@ -802,21 +786,24 @@ version.txt
 Run:
 
 ```bash
-docker exec jenkins sh -c "cat /var/jenkins_home/workspace/lab-03-git-checkout/version.txt"
+docker exec -it jenkins bash 
 ```
-
+```bash-
+cat /var/jenkins_home/workspace/lab-03-git-checkout/version.txt
+```
 Expected:
 
 ```text
 1.0
 ```
-
 Read the application script:
 
 ```bash
-docker exec jenkins sh -c "cat /var/jenkins_home/workspace/lab-03-git-checkout/app.sh"
+docker exec -it jenkins 
 ```
-
+```bash
+cat /var/jenkins_home/workspace/lab-03-git-checkout/app.sh
+```
 ---
 
 # Part 23 — Change the Application
@@ -828,31 +815,26 @@ Go to the application repository:
 ```bash
 cd /c/project/jenkins-demo-app
 ```
-
 Open:
 
 ```bash
 code version.txt
 ```
-
 Change:
 
 ```text
 1.0
 ```
-
 to:
 
 ```text
 2.0
 ```
-
 Save.
 
 ---
 
 # Part 24 — Change the Application Script
-
 Open:
 
 ```bash
@@ -864,19 +846,14 @@ Change:
 ```bash
 echo "Environment: Development"
 ```
-
 to:
-
 ```bash
 echo "Environment: Jenkins CI"
 ```
-
 Add:
-
 ```bash
 echo "Version: 2.0"
 ```
-
 So the file should contain:
 
 ```bash
@@ -891,22 +868,16 @@ echo "Environment: Jenkins CI"
 echo "Version: 2.0"
 
 echo "Application is running successfully."
-
 echo "======================================"
 ```
-
 Save.
-
 ---
-
 # Part 25 — Test the New Version Locally
 
 Run:
-
 ```bash
 sh app.sh
 ```
-
 Expected:
 
 ```text
@@ -922,7 +893,6 @@ Application is running successfully.
 
 ======================================
 ```
-
 Check:
 
 ```bash
@@ -934,9 +904,7 @@ Expected:
 ```text
 2.0
 ```
-
 ---
-
 # Part 26 — Git Status After the Change
 
 Run:
@@ -951,51 +919,34 @@ You should see:
 modified: app.sh
 modified: version.txt
 ```
-
 ---
-
 # Part 27 — Commit the Change
-
 ```bash
 git add app.sh version.txt
 ```
-
 Commit:
-
 ```bash
 git commit -m "Update application to version 2.0"
 ```
-
 ---
-
 # Part 28 — Push the Change to GitHub
-
 ```bash
 git push origin main
 ```
-
 ---
-
 # Part 29 — Verify the GitHub Change
-
 Refresh the GitHub repository.
 
 You should now see:
-
 ```text
 version.txt → 2.0
 ```
-
 and:
-
 ```text
 app.sh
 ```
-
 with the new Jenkins CI environment and version output.
-
 ---
-
 # Part 30 — Run Jenkins Again
 
 Go back to Jenkins:
