@@ -39,6 +39,19 @@ Webhook Troubleshooting
 ```
 ---
 # Important
+```bash
+docker run -d \
+  --name jenkins \
+  --restart unless-stopped \
+  --network jenkins \
+  -p 8081:8080 \
+  -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  jenkins/jenkins:lts
+```
+```bash
+docker ps
+```
 GitHub cannot send a webhook directly to:
 ```text
 http://localhost:8081
@@ -84,43 +97,33 @@ http://localhost:8081
 ```
 ---
 # Part 1 — Verify the Jenkins GitHub Plugin
-
 Open:
-
 ```text
 http://localhost:8081
 ```
-
 Go to:
-
 ```text
 Manage Jenkins
 ```
-
 Then:
-
 ```text
 Plugins
 ```
-
 Search for:
-
 ```text
 GitHub
 ```
-
 Make sure the Jenkins GitHub plugin is installed.
 
 The plugin provides GitHub integration and the webhook trigger used in this lab.
 
 If it is not installed:
-
 ```text
 Available plugins
+
 → Search GitHub
 → Install
 ```
-
 After installation, restart Jenkins only if Jenkins asks you to.
 
 Check Jenkins again:
@@ -130,7 +133,6 @@ http://localhost:8081
 ```
 
 ---
-
 # Part 2 — Verify the Application Repository
 
 We will continue using the application repository from Lab 3:
@@ -138,7 +140,6 @@ We will continue using the application repository from Lab 3:
 ```text
 jenkins-demo-app
 ```
-
 Go to the local repository:
 
 ```bash
